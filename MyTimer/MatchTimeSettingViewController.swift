@@ -8,23 +8,42 @@
 
 import UIKit
 
-class MatchTimeSettingViewController: UIViewController {
-
+class MatchTimeSettingViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate{
+    
+    let matchTimerSettingArray : [Int] = [3,5,6,8,10,12,20]
+    
+    let matchTimerSettingKey = "matchTimeTimer_value"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        matchTimerSetting.delegate = self
+        matchTimerSetting.dataSource = self
+        
+        let userDefaults = UserDefaults.standard
+        let matchTimeTimerValue = userDefaults.integer(forKey: matchTimerSettingKey)
+        
+        for row in 0..<matchTimerSettingArray.count {
+            if matchTimerSettingArray[row] == matchTimeTimerValue {
+                matchTimerSetting.selectedRow(inComponent: 0)
+            }
+        }
     }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return matchTimerSettingArray.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return String(matchTimerSettingArray[row])
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let userDefaults = UserDefaults.standard
+        userDefaults.setValue(matchTimerSettingArray[row], forKey: matchTimerSettingKey)
+        userDefaults.synchronize()
+    }
+    @IBOutlet weak var matchTimerSetting: UIPickerView!
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
 }
