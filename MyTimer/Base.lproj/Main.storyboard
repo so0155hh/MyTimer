@@ -32,14 +32,13 @@
                                     <action selector="startButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f8j-c4-doc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1B-AI-NwU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1B-AI-NwU">
                                 <rect key="frame" x="237" y="544" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="lQa-WL-tT4"/>
                                     <constraint firstAttribute="height" constant="100" id="zMS-aZ-Mec"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <state key="normal" title="14"/>
+                                <state key="normal" image="reload14btn"/>
                                 <connections>
                                     <action selector="fourteenResetBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wns-wH-89F"/>
                                 </connections>
@@ -78,9 +77,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOy-Ao-FaY">
+                                <rect key="frame" x="77" y="284" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="AWv-Tc-8W8"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="reloadbtn"/>
+                                <connections>
+                                    <action selector="matchTimeResetBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nQ6-FZ-h3u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="yOy-Ao-FaY" firstAttribute="top" secondItem="Qsw-vA-unr" secondAttribute="bottom" constant="80" id="0cL-GD-ZoG"/>
                             <constraint firstItem="MyU-8r-6Xe" firstAttribute="top" secondItem="anw-F1-tny" secondAttribute="bottom" constant="54" id="0dc-zl-Ofp"/>
                             <constraint firstItem="f1B-AI-NwU" firstAttribute="top" secondItem="w34-8A-rZZ" secondAttribute="bottom" constant="160" id="3am-V4-Vt9"/>
                             <constraint firstItem="3dU-YI-TsK" firstAttribute="top" secondItem="w34-8A-rZZ" secondAttribute="bottom" constant="54" id="3j0-eY-Gs3"/>
@@ -91,11 +101,13 @@
                             <constraint firstItem="bSS-lG-6Xd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="DJf-nF-RWn"/>
                             <constraint firstItem="Qsw-vA-unr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ibx-9y-TCf"/>
                             <constraint firstItem="w34-8A-rZZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="VK4-JF-t3i"/>
+                            <constraint firstItem="yOy-Ao-FaY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="buc-62-MIg"/>
                             <constraint firstItem="f1B-AI-NwU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="kwQ-YA-dYP"/>
                             <constraint firstItem="anw-F1-tny" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="ndM-n4-ROJ"/>
                             <constraint firstItem="MyU-8r-6Xe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="ng2-HA-sSN"/>
                             <constraint firstItem="bSS-lG-6Xd" firstAttribute="top" secondItem="anw-F1-tny" secondAttribute="bottom" constant="160" id="nig-b5-KjY"/>
                             <constraint firstItem="anw-F1-tny" firstAttribute="top" secondItem="Qsw-vA-unr" secondAttribute="bottom" constant="80" id="wFo-LU-c4a"/>
+                            <constraint firstItem="bSS-lG-6Xd" firstAttribute="trailing" secondItem="yOy-Ao-FaY" secondAttribute="trailing" id="zWY-ob-Nkv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -114,6 +126,8 @@
                     <connections>
                         <outlet property="countDownLabel" destination="Qsw-vA-unr" id="sy5-MZ-Qr7"/>
                         <outlet property="fourteenLabel" destination="3dU-YI-TsK" id="0dG-ZN-fgs"/>
+                        <outlet property="matchTimeResetBtn" destination="yOy-Ao-FaY" id="f87-Ih-bXS"/>
+                        <outlet property="matchTimeStartBtn" destination="anw-F1-tny" id="eUd-Xl-LWk"/>
                         <outlet property="shotClockLabel" destination="MyU-8r-6Xe" id="fas-ad-Ht9"/>
                         <segue destination="S0T-8V-IvP" kind="show" identifier="goSetting" id="jJ2-rm-F1C"/>
                         <segue destination="RZN-p4-L1q" kind="show" identifier="goMatchTimeSetting" id="2Um-Qd-fDe"/>
@@ -207,6 +221,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="reload14btn" width="300" height="278"/>
         <image name="reloadbtn" width="256" height="256"/>
         <image name="startbtn" width="256" height="256"/>
         <image name="stopbtn" width="256" height="256"/>
