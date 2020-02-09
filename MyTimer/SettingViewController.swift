@@ -18,25 +18,37 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         timerSettingPicker.delegate = self
         timerSettingPicker.dataSource = self
+      
         
-        let settings = UserDefaults.standard
-        let timerValue = settings.integer(forKey: settingKey)
+        
+        let userDefaults = UserDefaults.standard
+        let timerValue = userDefaults.integer(forKey: settingKey)
         
         for row in 0..<settingArray.count {
             if settingArray[row] == timerValue {
-                timerSettingPicker.selectedRow(inComponent: 0)
+                timerSettingPicker.selectRow(timerValue, inComponent: 0, animated: false)
             }
         }
-
-        // Do any additional setup after loading the view.
+        
+        if  timerValue == 12 {
+            timerSettingPicker.selectRow(0, inComponent: 0, animated: false)
+        } else if timerValue == 24 {
+            timerSettingPicker.selectRow(1, inComponent: 0, animated: false)
+        } else if timerValue == 30 {
+            timerSettingPicker.selectRow(2, inComponent: 0, animated: false)
+        }
+     
     }
-    
     @IBOutlet weak var timerSettingPicker: UIPickerView!
     
-    @IBAction func decisionButtonAction(_ sender: Any) {
-        _ = navigationController?.popViewController(animated: true)
+    @IBOutlet weak var saveBtn: UIBarButtonItem!
+    
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBAction func cancelReturn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
-        func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
             return 1
         }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -46,8 +58,9 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         return String(settingArray[row])
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let settings = UserDefaults.standard
-        settings.setValue(settingArray[row], forKey: settingKey)
-        settings.synchronize()
+        let userDefaults = UserDefaults.standard
+        userDefaults.setValue(settingArray[row], forKey: settingKey)
+        userDefaults.synchronize()
     }
+   
 }

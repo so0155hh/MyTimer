@@ -64,8 +64,8 @@
 			children = (
 				9B5B181A23CFEFEB00AE258D /* AppDelegate.swift */,
 				9B5B181C23CFEFEB00AE258D /* SceneDelegate.swift */,
-				9B5B181E23CFEFEB00AE258D /* ViewController.swift */,
 				9B5B182023CFEFEB00AE258D /* Main.storyboard */,
+				9B5B181E23CFEFEB00AE258D /* ViewController.swift */,
 				9B52AEFA23EA1E7300A8E4E3 /* MatchTimeSettingViewController.swift */,
 				9B5B182E23D000B200AE258D /* SettingViewController.swift */,
 				9B5B182323CFEFED00AE258D /* Assets.xcassets */,
@@ -297,6 +297,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S93A4URV76;
 				INFOPLIST_FILE = MyTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -314,6 +315,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S93A4URV76;
 				INFOPLIST_FILE = MyTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

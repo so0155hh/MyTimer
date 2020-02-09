@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mjc-GW-fKZ">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,13 +16,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsw-vA-unr">
-                                <rect key="frame" x="171.5" y="168" width="71" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="154.33333333333334" y="128" width="105.33333333333334" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anw-F1-tny">
-                                <rect key="frame" x="77" y="284" width="100" height="100"/>
+                                <rect key="frame" x="77" y="212" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="0hG-LS-bLC"/>
                                     <constraint firstAttribute="width" constant="100" id="E4P-lf-cbv"/>
@@ -32,19 +32,19 @@
                                     <action selector="startButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f8j-c4-doc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1B-AI-NwU">
-                                <rect key="frame" x="237" y="544" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOy-Ao-FaY">
+                                <rect key="frame" x="77" y="212" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="lQa-WL-tT4"/>
-                                    <constraint firstAttribute="height" constant="100" id="zMS-aZ-Mec"/>
+                                    <constraint firstAttribute="height" constant="100" id="AWv-Tc-8W8"/>
+                                    <constraint firstAttribute="width" constant="100" id="fKN-F3-nLh"/>
                                 </constraints>
-                                <state key="normal" image="reload14btn"/>
+                                <state key="normal" image="reloadbtn"/>
                                 <connections>
-                                    <action selector="fourteenResetBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wns-wH-89F"/>
+                                    <action selector="matchTimeResetBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nQ6-FZ-h3u"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w34-8A-rZZ">
-                                <rect key="frame" x="237" y="284" width="100" height="100"/>
+                                <rect key="frame" x="237" y="212" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="rSU-S6-8hL"/>
                                     <constraint firstAttribute="height" constant="100" id="rgj-Hw-rhD"/>
@@ -56,150 +56,176 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSS-lG-6Xd">
-                                <rect key="frame" x="77" y="544" width="100" height="100"/>
+                                <rect key="frame" x="77" y="432" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="L8o-Ow-MX0"/>
+                                    <constraint firstAttribute="width" constant="100" id="r9Y-gJ-WbR"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="reloadbtn"/>
+                                <state key="normal" image="reloadbtn"/>
                                 <connections>
                                     <action selector="resetBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="unh-TX-fKK"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyU-8r-6Xe">
-                                <rect key="frame" x="91.5" y="438" width="71" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="154.66666666666666" y="348" width="104.99999999999997" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dU-YI-TsK">
-                                <rect key="frame" x="251.5" y="438" width="71" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOy-Ao-FaY">
-                                <rect key="frame" x="77" y="284" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1B-AI-NwU">
+                                <rect key="frame" x="237" y="432" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="AWv-Tc-8W8"/>
+                                    <constraint firstAttribute="width" constant="100" id="lQa-WL-tT4"/>
+                                    <constraint firstAttribute="height" constant="100" id="zMS-aZ-Mec"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="reloadbtn"/>
+                                <state key="normal" image="reload14btn"/>
                                 <connections>
-                                    <action selector="matchTimeResetBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nQ6-FZ-h3u"/>
+                                    <action selector="fourteenResetBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MRS-C0-BqC"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Vl-9o-Ex1">
+                                <rect key="frame" x="0.0" y="327" width="414" height="1"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="ZOU-1T-HPD"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="yOy-Ao-FaY" firstAttribute="top" secondItem="Qsw-vA-unr" secondAttribute="bottom" constant="80" id="0cL-GD-ZoG"/>
-                            <constraint firstItem="MyU-8r-6Xe" firstAttribute="top" secondItem="anw-F1-tny" secondAttribute="bottom" constant="54" id="0dc-zl-Ofp"/>
-                            <constraint firstItem="f1B-AI-NwU" firstAttribute="top" secondItem="w34-8A-rZZ" secondAttribute="bottom" constant="160" id="3am-V4-Vt9"/>
-                            <constraint firstItem="3dU-YI-TsK" firstAttribute="top" secondItem="w34-8A-rZZ" secondAttribute="bottom" constant="54" id="3j0-eY-Gs3"/>
-                            <constraint firstItem="Qsw-vA-unr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="5U9-Wa-N0b"/>
-                            <constraint firstItem="3dU-YI-TsK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="9fI-sR-DY0"/>
-                            <constraint firstItem="f1B-AI-NwU" firstAttribute="leading" secondItem="bSS-lG-6Xd" secondAttribute="trailing" constant="60" id="9o4-Es-91f"/>
-                            <constraint firstItem="w34-8A-rZZ" firstAttribute="bottom" secondItem="anw-F1-tny" secondAttribute="bottom" id="Ayu-uJ-9wS"/>
-                            <constraint firstItem="bSS-lG-6Xd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="DJf-nF-RWn"/>
+                            <constraint firstItem="yOy-Ao-FaY" firstAttribute="top" secondItem="Qsw-vA-unr" secondAttribute="bottom" constant="30" id="0cL-GD-ZoG"/>
+                            <constraint firstItem="Qsw-vA-unr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="5U9-Wa-N0b"/>
+                            <constraint firstItem="0Vl-9o-Ex1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5eU-MK-0ie"/>
+                            <constraint firstItem="bSS-lG-6Xd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="9Yi-YT-tSy"/>
+                            <constraint firstItem="MyU-8r-6Xe" firstAttribute="top" secondItem="0Vl-9o-Ex1" secondAttribute="bottom" constant="20" id="AxY-qy-Z5r"/>
                             <constraint firstItem="Qsw-vA-unr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ibx-9y-TCf"/>
+                            <constraint firstItem="bSS-lG-6Xd" firstAttribute="top" secondItem="MyU-8r-6Xe" secondAttribute="bottom" constant="30" id="K1Z-qK-4UK"/>
+                            <constraint firstItem="w34-8A-rZZ" firstAttribute="top" secondItem="Qsw-vA-unr" secondAttribute="bottom" constant="30" id="NTt-Cw-SE7"/>
                             <constraint firstItem="w34-8A-rZZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="VK4-JF-t3i"/>
+                            <constraint firstItem="0Vl-9o-Ex1" firstAttribute="top" secondItem="anw-F1-tny" secondAttribute="bottom" constant="15" id="YeN-kg-34F"/>
                             <constraint firstItem="yOy-Ao-FaY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="buc-62-MIg"/>
+                            <constraint firstAttribute="trailing" secondItem="0Vl-9o-Ex1" secondAttribute="trailing" id="fnl-Mn-hfB"/>
                             <constraint firstItem="f1B-AI-NwU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="kwQ-YA-dYP"/>
                             <constraint firstItem="anw-F1-tny" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="ndM-n4-ROJ"/>
-                            <constraint firstItem="MyU-8r-6Xe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="ng2-HA-sSN"/>
-                            <constraint firstItem="bSS-lG-6Xd" firstAttribute="top" secondItem="anw-F1-tny" secondAttribute="bottom" constant="160" id="nig-b5-KjY"/>
-                            <constraint firstItem="anw-F1-tny" firstAttribute="top" secondItem="Qsw-vA-unr" secondAttribute="bottom" constant="80" id="wFo-LU-c4a"/>
-                            <constraint firstItem="bSS-lG-6Xd" firstAttribute="trailing" secondItem="yOy-Ao-FaY" secondAttribute="trailing" id="zWY-ob-Nkv"/>
+                            <constraint firstItem="MyU-8r-6Xe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ng2-HA-sSN"/>
+                            <constraint firstItem="0Vl-9o-Ex1" firstAttribute="top" secondItem="yOy-Ao-FaY" secondAttribute="bottom" constant="15" id="ofZ-Qk-LE1"/>
+                            <constraint firstItem="f1B-AI-NwU" firstAttribute="top" secondItem="MyU-8r-6Xe" secondAttribute="bottom" constant="30" id="vei-Np-RdK"/>
+                            <constraint firstItem="anw-F1-tny" firstAttribute="top" secondItem="Qsw-vA-unr" secondAttribute="bottom" constant="30" id="wFo-LU-c4a"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="GFk-jg-gqg">
-                        <barButtonItem key="leftBarButtonItem" title="MatchTime" id="Sno-xX-IEI">
+                        <barButtonItem key="leftBarButtonItem" title="Game Clock Edit" id="Sno-xX-IEI">
                             <connections>
                                 <action selector="MatchTimeSettingBtn:" destination="BYZ-38-t0r" id="Gnh-DB-PNZ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="83s-ip-Dt6">
+                        <barButtonItem key="rightBarButtonItem" title="Shot Clock Edit" id="83s-ip-Dt6">
                             <connections>
-                                <action selector="settingButtonAction:" destination="BYZ-38-t0r" id="OTO-xT-jcJ"/>
+                                <action selector="shotClockSetting:" destination="BYZ-38-t0r" id="jFD-pd-4CM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="countDownLabel" destination="Qsw-vA-unr" id="sy5-MZ-Qr7"/>
-                        <outlet property="fourteenLabel" destination="3dU-YI-TsK" id="0dG-ZN-fgs"/>
+                        <outlet property="fourteenResetBtn" destination="f1B-AI-NwU" id="JM6-F2-v8h"/>
                         <outlet property="matchTimeResetBtn" destination="yOy-Ao-FaY" id="f87-Ih-bXS"/>
                         <outlet property="matchTimeStartBtn" destination="anw-F1-tny" id="eUd-Xl-LWk"/>
+                        <outlet property="matchTimerLabel" destination="Qsw-vA-unr" id="hZh-6p-aK7"/>
                         <outlet property="shotClockLabel" destination="MyU-8r-6Xe" id="fas-ad-Ht9"/>
-                        <segue destination="S0T-8V-IvP" kind="show" identifier="goSetting" id="jJ2-rm-F1C"/>
-                        <segue destination="RZN-p4-L1q" kind="show" identifier="goMatchTimeSetting" id="2Um-Qd-fDe"/>
+                        <outlet property="shotClockResetBtn" destination="bSS-lG-6Xd" id="LuH-ya-TMs"/>
+                        <outlet property="stopBtn" destination="w34-8A-rZZ" id="M2M-WC-kAV"/>
+                        <segue destination="yT2-DM-7uO" kind="presentation" identifier="goSetting" id="jJ2-rm-F1C"/>
+                        <segue destination="Cuv-Hs-e3L" kind="presentation" identifier="goMatchTimeSetting" id="cVA-As-DBk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
+            <point key="canvasLocation" x="1046.25" y="114.08450704225352"/>
         </scene>
-        <!--Setting View Controller-->
+        <!--Shot Clock Edit-->
         <scene sceneID="ins-bf-Wip">
             <objects>
                 <viewController id="S0T-8V-IvP" customClass="SettingViewController" customModule="MyTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I9t-VD-ctR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3l-Ku-ky2">
-                                <rect key="frame" x="0.0" y="88" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="313" width="414" height="216"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="T3l-Ku-ky2" firstAttribute="trailing" secondItem="K77-RO-8ZF" secondAttribute="trailing" id="7cr-sF-Yzx"/>
-                            <constraint firstItem="T3l-Ku-ky2" firstAttribute="top" secondItem="K77-RO-8ZF" secondAttribute="top" id="LkG-S8-Fci"/>
                             <constraint firstItem="T3l-Ku-ky2" firstAttribute="leading" secondItem="K77-RO-8ZF" secondAttribute="leading" id="d9H-DQ-szG"/>
+                            <constraint firstItem="T3l-Ku-ky2" firstAttribute="centerY" secondItem="I9t-VD-ctR" secondAttribute="centerY" id="qCa-Sp-gwx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="K77-RO-8ZF"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sGY-4f-hPa">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="TJP-fn-qFP">
+                    <navigationItem key="navigationItem" title="Shot Clock Edit" id="sGY-4f-hPa">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="HkL-jb-Rmj">
                             <connections>
-                                <action selector="decisionButtonAction:" destination="S0T-8V-IvP" id="H0H-2C-hKM"/>
+                                <action selector="cancelReturn:" destination="S0T-8V-IvP" id="zjO-4u-buh"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Hpk-7r-S8m">
+                            <connections>
+                                <segue destination="Cia-nO-pS9" kind="unwind" unwindAction="backToTppWithSegue:" id="VjN-u7-dFq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cancelButton" destination="HkL-jb-Rmj" id="Ngd-qV-SqS"/>
+                        <outlet property="saveBtn" destination="Hpk-7r-S8m" id="iai-O0-Nkl"/>
                         <outlet property="timerSettingPicker" destination="T3l-Ku-ky2" id="f2W-Fx-7bP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdP-ZW-bb4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Cia-nO-pS9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1776.8115942028987" y="108.48214285714285"/>
+            <point key="canvasLocation" x="2686.9565217391305" y="108.48214285714285"/>
         </scene>
-        <!--Match Time Setting View Controller-->
+        <!--Game CLock Edit-->
         <scene sceneID="z7A-m7-6Kn">
             <objects>
                 <viewController id="RZN-p4-L1q" customClass="MatchTimeSettingViewController" customModule="MyTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UgD-7N-Zke">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8eD-Ou-YRQ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="313" width="414" height="216"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="8eD-Ou-YRQ" firstAttribute="trailing" secondItem="WjH-WD-O6z" secondAttribute="trailing" id="2eY-d3-qzE"/>
-                            <constraint firstItem="8eD-Ou-YRQ" firstAttribute="top" secondItem="WjH-WD-O6z" secondAttribute="top" id="YKV-X7-k94"/>
+                            <constraint firstItem="8eD-Ou-YRQ" firstAttribute="centerY" secondItem="UgD-7N-Zke" secondAttribute="centerY" id="6qU-1Z-9aP"/>
                             <constraint firstItem="8eD-Ou-YRQ" firstAttribute="leading" secondItem="WjH-WD-O6z" secondAttribute="leading" id="ei1-v9-Veb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WjH-WD-O6z"/>
                     </view>
-                    <navigationItem key="navigationItem" id="eH6-h6-3ZL"/>
+                    <navigationItem key="navigationItem" title="Game CLock Edit" id="eH6-h6-3ZL">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="M9X-Yl-Ek6">
+                            <connections>
+                                <action selector="cancelBtn:" destination="RZN-p4-L1q" id="VKM-aH-kl7"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="BJ0-Cy-rtK">
+                            <connections>
+                                <segue destination="NPT-TV-KXM" kind="unwind" unwindAction="returnGameTimerWithSegue:" id="c2g-cA-L4I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="matchTimerSetting" destination="8eD-Ou-YRQ" id="sAG-dB-88I"/>
+                        <outlet property="matchTimerSetting" destination="8eD-Ou-YRQ" id="V5I-jz-7DU"/>
+                        <outlet property="saveBtn" destination="BJ0-Cy-rtK" id="amw-0b-g9k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uyl-Cw-V4X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="NPT-TV-KXM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1776.8115942028987" y="803.57142857142856"/>
+            <point key="canvasLocation" x="2686.9565217391305" y="803.57142857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aqd-cB-JHG">
@@ -218,6 +244,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aFn-ey-Omz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bOH-fH-ERX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yT2-DM-7uO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nfn-N0-ekP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="S0T-8V-IvP" kind="relationship" relationship="rootViewController" id="Z9v-Rd-29m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j1m-IK-U8w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1776.8115942028987" y="108.48214285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FKU-sb-gEc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cuv-Hs-e3L" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s68-85-zWZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RZN-p4-L1q" kind="relationship" relationship="rootViewController" id="EIK-iW-MKa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9QO-FM-CgY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1776.8115942028987" y="803.57142857142856"/>
         </scene>
     </scenes>
     <resources>

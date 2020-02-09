@@ -42,8 +42,11 @@ class MatchTimeSettingViewController: UIViewController,UIPickerViewDataSource, U
         userDefaults.setValue(matchTimerSettingArray[row], forKey: matchTimerSettingKey)
         userDefaults.synchronize()
     }
+    
     @IBOutlet weak var matchTimerSetting: UIPickerView!
-    
-    
+    @IBOutlet weak var saveBtn: UIBarButtonItem!
+    @IBAction func cancelBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
 }
