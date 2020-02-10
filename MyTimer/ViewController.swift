@@ -178,13 +178,13 @@ class ViewController: UIViewController {
                     print("ブザーでエラーが発生しました")
                 }
                 //shotClock = 0 になったら、試合時間を保存する
-                if let startTime = self.startTime {
-                    self.MelapsedTime += Date.timeIntervalSinceReferenceDate - startTime
+                if let MstartTime = self.MstartTime {
+                    self.MelapsedTime += Date.timeIntervalSinceReferenceDate - MstartTime
                 }
                 self.timer?.invalidate()
                 
                 if t < 0 {
-                    self.shotClockLabel.text = "0.00"
+                    self.shotClockLabel.text = "0.0"
                 }
                 matchTimeStartBtn.isHidden = true
                 stopBtn.isHidden = true
