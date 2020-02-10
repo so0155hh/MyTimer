@@ -27,6 +27,11 @@ class MatchTimeSettingViewController: UIViewController,UIPickerViewDataSource, U
                 matchTimerSetting.selectedRow(inComponent: 0)
             }
         }
+        //PickerViewのカーソルを選択したMatchTimeに合わせる
+        let currentValue = matchTimeTimerValue
+        if let index = matchTimerSettingArray.firstIndex(of: currentValue) {
+            matchTimerSetting.selectRow(index, inComponent: 0, animated: false)
+        }
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

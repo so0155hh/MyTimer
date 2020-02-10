@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //初期値を登録
         let settings = UserDefaults.standard
         settings.register(defaults: [settingKey:24])
         settings.register(defaults: [matchTimerSettingKey:10])
@@ -73,7 +73,6 @@ class ViewController: UIViewController {
         stopBtn.isHidden = false
         shotClockResetBtn.isHidden = false
         fourteenResetBtn.isHidden = false
-       // matchTimeResetBtn.isEnabled = false
     }
     //14秒ルールの適用
     @IBAction func fourteenResetBtn(_ sender: Any) {
@@ -83,6 +82,7 @@ class ViewController: UIViewController {
             self.startTime = Date.timeIntervalSinceReferenceDate
             elapsedTime = 10.0
             shotClockLabel.text = "14"
+            //30秒ルール時
         } else if timerValue == 30 {
             self.startTime = Date.timeIntervalSinceReferenceDate
             elapsedTime = 16.0
@@ -105,7 +105,7 @@ class ViewController: UIViewController {
         stopBtn.isHidden = true
     }
     @IBAction func resetBtn(_ sender: Any) {
-        
+        //shotClockのリセット
          let shotCLockTimer = userDefaults.integer(forKey: "timer_value")
         self.startTime = Date.timeIntervalSinceReferenceDate
         self.elapsedTime = 0.0
@@ -114,7 +114,7 @@ class ViewController: UIViewController {
         
     }
     @IBAction func matchTimeResetBtn(_ sender: Any) {
-        
+        //試合時間のリセット
         let matchTimer = userDefaults.integer(forKey:"matchTimeTimer_value")
         self.MstartTime = Date.timeIntervalSinceReferenceDate
         let shotCLockTimer = userDefaults.integer(forKey: "timer_value")
@@ -182,28 +182,26 @@ class ViewController: UIViewController {
                     self.MelapsedTime += Date.timeIntervalSinceReferenceDate - startTime
                 }
                 self.timer?.invalidate()
-                matchTimeStartBtn.isHidden = true
+                
                 if t < 0 {
                     self.shotClockLabel.text = "0.00"
                 }
-                //  matchTimeResetBtn.isHidden = false
                 matchTimeStartBtn.isHidden = true
                 stopBtn.isHidden = true
             }
         }
     }
          override func viewDidAppear(_ animated: Bool) {
-               
+               //PickerViewで選択された時間を表示する
                let shotCLockTimer = userDefaults.integer(forKey: "timer_value")
                self.elapsedTime = 0.0
                shotClockLabel.text = String(shotCLockTimer)
                
-               
                let matchTimer = userDefaults.integer(forKey:"matchTimeTimer_value")
                matchTimerLabel.text = String(matchTimer) + ":00"
-               // self.MstartTime = Date.timeIntervalSinceReferenceDate
                       self.MelapsedTime = 0.0
         }
+    //saveボタンが押されたら、表示を更新する
     @IBAction func backToTpp(segue: UIStoryboardSegue) {
          let shotCLockTimer = userDefaults.integer(forKey: "timer_value")
                      self.elapsedTime = 0.0

@@ -19,8 +19,6 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         timerSettingPicker.delegate = self
         timerSettingPicker.dataSource = self
       
-        
-        
         let userDefaults = UserDefaults.standard
         let timerValue = userDefaults.integer(forKey: settingKey)
         
